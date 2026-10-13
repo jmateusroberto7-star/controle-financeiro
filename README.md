@@ -16,7 +16,7 @@ interface simples e responsiva
 - CSS3
 - Java Script
   ## Autor
-  ** Mateus Roberto **
+  **Mateus Roberto**
   - Curso:Programação Web
   - Data: 13/10/2026
     ## Como usar
