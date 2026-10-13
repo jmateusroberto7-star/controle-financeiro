@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle Financeiro</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box; 
+            font-family: 'Arial', sans-serif; 
+        }
+        body {
+            background-color: #f0f4f8;
+            min-height: 100vh;
+            padding: 20px;  
+        }
+        .container {
+            max-width: 500px;  
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #2d3748;
+            margin-bottom: 30px;  
+        }
+        h3 {
+            color: #2d3748;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        /* Saldo */
+        .saldo {
+            background: linear-gradient(135deg, #2f855a, #38a169);  
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        .saldo p {
+            font-size: 28px;
+            font-weight: bold;   
+        }
+        /* Formulário */
+        .formulario {
+            margin-bottom: 25px;  
+        }
+        input, select, button {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 10px;
+            border: 2px solid #e2e8f0;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+        button {
+            background-color: #3182ce;
+            color: white;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #2b6cb0;
+        }
+        /* Lista de Transações */
+        .lista ul {
+            list-style: none;   
+        }
+        .lista li {
+            padding: 12px;
+            border-radius: 6px;
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f7fafc;  
+        }
+        .entrada {
+            border-left: 4px solid #38a169;   
+        }
+        .saida {
+            border-left: 4px solid #e53e3e;   
+        }
+        .valor-entrada {
+            color: #38a169;
+            font-weight: bold;   
+        }
+        .valor-saida {
+            color: #e53e3e;
+            font-weight: bold;   
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>💰 Controle Financeiro</h1>
+        
+        <!-- Saldo Total -->
+        <div class="saldo">
+            <h3>Saldo Atual</h3>
+            <p id="valor-saldo">R$ 0,00</p>
+        </div>
+
+        <!-- Formulário para adicionar transação -->
+        <div class="formulario">
+            <h3>Adicionar Transação</h3>
+            <input type="text" id="descricao" placeholder="Descrição" required>
+            <input type="text" id="valor" placeholder="Valor (ex: 1500,00)" required>
+            <select id="tipo">
+                <option value="entrada">Entrada (+)</option>
+                <option value="saida">Saída (-)</option>
+            </select>
+            <button id="btn-adicionar">Adicionar</button>
+        </div>
+
+        <!-- Lista de transações -->
+        <div class="lista">
+            <h3>Histórico</h3>
+            <ul id="lista-transacoes">
+                <li>Nenhuma transação registrada.</li>
+            </ul>
+        </div>
+    </div>
+    
+    <script src="logica.js"></script>
+</body>
+</html>
