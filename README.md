@@ -17,8 +17,8 @@ interface simples e responsiva
 - Java Script
   ## Autor
   **Mateus Roberto**
-  -Curso:Programação Web
-  -Data: 13/10/2026
+  - Curso:Programação Web
+  - Data: 13/10/2026
     ## Como usar
   .Abra o arquivo `site.html` no navegador
   .Preencha a descrição, valor e tipo da transação
